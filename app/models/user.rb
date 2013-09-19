@@ -43,8 +43,4 @@ class User < ActiveRecord::Base
   		Digest::SHA2.hexdigest("#{self.salt}--#{pass}")
   	end
 
-  	# def find_by_email
-
-  	# end
-
 end
