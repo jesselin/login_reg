@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   # class method that checks whether the user's email and submitted_password are valid
   def self.authenticate(email, submitted_password)
-  	user = find_by!(email)
+  	user = find_by_email_address(email)
 
    	return nil if user.nil?
    	return user if user.has_password?(submitted_password)
